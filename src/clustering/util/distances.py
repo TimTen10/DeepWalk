@@ -25,11 +25,3 @@ def hamming_distance(vec1, vec2):
 def jaccard_metric(vec1, vec2):
     # TODO: Jaccard metric
     pass
-
-
-def main():
-    print(hamming_distance([0, 1], [1, 0]))
-
-
-if __name__ == '__main__':
-    main()

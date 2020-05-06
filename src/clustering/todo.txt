@@ -1,0 +1,1 @@
+TODO: Cluster class, create cluster object from input points combined with clustering type/method
