@@ -1,0 +1,9 @@
+src
+-clustering
+--util -> zB Distanzfunktionen bzw Ähnlichkeit, etc.
+---distanzfunktionen.py
+--types -> typen von clustering verfahren
+---kmeans
+---nearest neighbor
+--...
+-main.py
