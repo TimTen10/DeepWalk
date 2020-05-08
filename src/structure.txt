@@ -6,5 +6,6 @@ src
 ---kmeans
 ---nearest neighbor
 -word2vec
---...
+-graph
+--graph Klasse (mit Eigenschaft/Methode 'walk')
 -main.py
