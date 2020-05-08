@@ -1,3 +1,4 @@
+# there's probably far more efficient ways of handling this out there!
 def _get_alpha(graph_dict, last_node, node, p, q):
     if last_node == node:
         alpha = 1/p
