@@ -1,6 +1,7 @@
 import random
+import json
 
-from src.util.bias import transition_probabilities
+from src.network.util.bias import transition_probabilities
 
 
 class Graph:
@@ -26,6 +27,7 @@ class Graph:
             walk += random.choices(
                 # self.graph_dict[node] returns a list of all neighboring nodes
                 population=self.graph_dict[current_node],
+                # TODO: Do weights have to be divided / normalized or does random.choices handle this
                 weights=transition_probabilities(self.graph_dict, current_node, last_node, p, q)
             )
             current_node = walk[-1]
@@ -33,15 +35,10 @@ class Graph:
 
 
 def main():
-    g_d = {
-        't': ['x1', 'v'],
-        'v': ['t', 'x1', 'x2', 'x3'],
-        'x1': ['t', 'v'],
-        'x2': ['v'],
-        'x3': ['v']
-    }
-    graph = Graph(g_d)
-    print(graph.random_walk('t', 17))
+    with open(f"./../../examplegraphs/pokegraph.json", 'r') as pokefile:
+        graph_data = json.load(pokefile)
+    graph = Graph(graph_data)
+    print(graph.random_walk('Pikachu', 5, p=4, q=1))
 
 
 if __name__ == '__main__':
