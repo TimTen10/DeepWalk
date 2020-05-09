@@ -1,0 +1,3 @@
+TODO:
+As can be seen in testall.py the behavior of generate pairs has to be adjusted in case the walk length = 1.
+Simplest fix: Do not allow walks of too short length nor window sizes <= 0
