@@ -12,13 +12,14 @@ def main():
     # generate walks
     walks = pp.generate_walks(graph, 5, 1)
 
-    # it keeps the order! Very important
+    # it keeps the order, very important! But why again?
+    # Only order of graph.nodes plays a role (later on in generate_one_hot)
     for w, n in zip(walks, graph.nodes):
         print(n, w)
 
     # generate input pairs
     pairs = pp.generate_pairs(walks, 2)
-    print(pairs)
+    # print(pairs)
 
 
 if __name__ == '__main__':
