@@ -28,7 +28,6 @@ def generate_pairs(walks, window):
             # both variants work! Understand why part behind + works as it does!
             # slice = walk[max(0, i-window):min(m, i+window+1)]
             neighbors = walk[max(0, i-window):i] + walk[i+1:min(m, i+window+1)]
-            # TODO: Pairs have to stay grouped in regard to walk / window and node they originate from!
             pairs.extend((node, i) for i in neighbors)
     return pairs
 
